@@ -2,7 +2,6 @@ from random import randint
 
 from graphic_arts.start_game_banner import run_screensaver
 
-
 DEFAULT_ATTACK = 5
 DEFAULT_DEFENCE = 10
 DEFAULT_STAMINA = 80
@@ -96,9 +95,10 @@ def choice_char_class(char_name: str) -> Character:
 
     approve_choice: str = ''
     while approve_choice != 'y':
-        selected_class = input('Введи название персонажа, '
-                           'за которого хочешь играть: Воитель — warrior, '
-                           'Маг — mage, Лекарь — healer: ')
+        selected_class = input(
+            'Введи название персонажа, '
+            'за которого хочешь играть: Воитель — warrior, '
+            'Маг — mage, Лекарь — healer: ')
         char_class: Character = game_classes[selected_class](char_name)
         print(char_class)
 
